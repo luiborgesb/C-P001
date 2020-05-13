@@ -1,0 +1,86 @@
+:root{
+    --color_1: #233342;
+    --color_2: #D28F36;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+@media (min-width: 0px) and (max-width: 596px){
+    #contenedorRS{
+        position: absolute;
+        top: calc(50% - (2em*6));
+        left: calc(50% - (4em/2));
+        width: 5em;
+        height: calc(4em*6);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .redesSociales{
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        background-color: var(--color_1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .redesSociales img{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .redesSociales:active{
+        width: 3.5em;
+        height: 3.5em;
+        transition: 0s;
+    }
+}
+@media (min-width: 597px) {
+    #contenedorRS{
+        position: absolute;
+        top: calc(50% - (4em/2));
+        left: calc(50% - (2em*6));
+        width: calc(4em*6);
+        height: 5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .redesSociales{
+        width: 4em;
+        height: 4em;
+        border-radius: 50%;
+        background-color: var(--color_1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: 1s;
+    }
+    .redesSociales img{
+        width: 2.5em;
+        height: 2.5em;
+        transition: 1s;
+    }
+    .redesSociales:hover{
+        background-color: var(--color_2);
+        transform: rotate(-30deg);
+        transition: .5s;
+    }
+    .redesSociales img:hover{
+        width: 3em;
+        height: 3em;
+        transition: .5s;
+    }
+}
+
